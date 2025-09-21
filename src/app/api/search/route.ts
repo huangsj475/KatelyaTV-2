@@ -57,7 +57,7 @@ export async function GET(request: Request) {
         shouldFilterAdult = userSettings?.filter_adult_content !== false;
       } catch (error) {
         // 出错时默认过滤成人内容
-        shouldFilterAdult = false;
+        shouldFilterAdult = true;
       }
     }
 
