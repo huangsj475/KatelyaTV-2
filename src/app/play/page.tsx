@@ -1132,7 +1132,6 @@ function PlayPageClient() {
 
             if (video.hls) {
               video.hls.destroy();
-              video.hls = null;
             }
             const hls = new Hls({
               debug: false, // 关闭日志
