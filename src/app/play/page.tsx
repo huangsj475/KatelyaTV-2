@@ -757,6 +757,7 @@ function PlayPageClient() {
       // 在更换集数前保存当前播放进度
       if (artPlayerRef.current && artPlayerRef.current.paused) {
         saveCurrentPlayProgress();
+        resumeTimeRef.current = null; // 清除恢复时间
       }
       setCurrentEpisodeIndex(episodeIndex);
     }
@@ -1131,6 +1132,7 @@ function PlayPageClient() {
 
             if (video.hls) {
               video.hls.destroy();
+              video.hls = null;
             }
             const hls = new Hls({
               debug: false, // 关闭日志
