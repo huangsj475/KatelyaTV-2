@@ -1095,7 +1095,7 @@ function PlayPageClient() {
         volume: 0.7,
         isLive: false,
         muted: false,
-        autoplay: true,
+        autoplay: false,
         pip: true,
         autoSize: false,
         autoMini: false,
