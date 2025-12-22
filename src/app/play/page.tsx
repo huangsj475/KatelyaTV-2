@@ -1058,7 +1058,7 @@ function PlayPageClient() {
       typeof (window as any).webkitConvertPointFromNodeToPage === 'function';
 
     // 非WebKit浏览器且播放器已存在，使用switch方法切换
-    if (!isWebkit && artPlayerRef.current) {
+    /*if (!isWebkit && artPlayerRef.current) {
       artPlayerRef.current.switch = videoUrl;
       artPlayerRef.current.title = `${videoTitle} - 第${
         currentEpisodeIndex + 1
@@ -1071,7 +1071,7 @@ function PlayPageClient() {
         );
       }
       return;
-    }
+    }*/
 
     // WebKit浏览器或首次创建：销毁之前的播放器实例并创建新的
     if (artPlayerRef.current) {
